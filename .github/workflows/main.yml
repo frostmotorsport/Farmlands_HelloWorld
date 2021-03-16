@@ -12,5 +12,5 @@ jobs:
         chmod +x /entrypoint.sh
         ./action-a/entrypoint.sh
       shell: bash
-        with:
-          MY_NAME: "Steve"
+     # with: 
+       # MY_NAME: "Steve"
