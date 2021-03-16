@@ -5,9 +5,12 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: script
-    run: action-a/entrypoint.sh
-    shell: bash
-      with:
-        MY_NAME: "Steve"
+    - name: checkout
+      uses: actions/checkout@v1
+    - name: script
+      run: |
+        chmod +x /entrypoint.sh
+        ./action-a/entrypoint.sh
+      shell: bash
+        with:
+          MY_NAME: "Steve"
