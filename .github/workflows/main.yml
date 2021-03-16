@@ -11,6 +11,7 @@ jobs:
       run: |
         chmod +x ./action-a/entrypoint.sh
         ./action-a/entrypoint.sh
+        env: INPUT_MY_NAME: "Steve"
       shell: bash
      # with: 
        # MY_NAME: "Steve"
