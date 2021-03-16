@@ -1,0 +1,18 @@
+name: simple
+on: push
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v1
+    - name: perms
+      run: chmod +x ./action-a/entrypoint.sh
+    - name: script
+      run: ./action-a/entrypoint.sh
+      env: 
+        INPUT_MY_NAME: "Steve"
+     #shell: bash
+     # with: 
+       # MY_NAME: "Steve"
