@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: script
-        run: action-a/entrypoint.sh
-        shell: bash
-        with:
-          MY_NAME: "Steve"
+    run: action-a/entrypoint.sh
+    shell: bash
+      with:
+        MY_NAME: "Steve"
